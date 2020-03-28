@@ -13,3 +13,6 @@ PYTHON AND REQUIREMENTS
 Guide you on how to use pip for requirements: https://pip.pypa.io/en/stable/user_guide/
 Quickly show you how to create a python venv: https://webcache.googleusercontent.com/search?q=cache:imIPI9JGVJUJ:https://docs.python.org/3/library/venv.html+&cd=1&hl=en&ct=clnk&gl=us
 Help you set up a GCP App Engine website: https://cloud.google.com/appengine/docs/flexible/python/quickstart
+
+WEB SCRAPING
+Give you a script to setup environment for Selenium via Python: https://github.com/garywu/google-compute-engine-selenium/blob/master/demo.py
