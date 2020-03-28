@@ -2,9 +2,9 @@
 # @Author: Christopher Hsu
 # @Date:   2020-03-28 12:08:00
 # @Last Modified by:   Christopher Hsu
-# @Last Modified time: 2020-03-28 12:39:21
+# @Last Modified time: 2020-03-28 17:59:27
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 #  import os
 
 
@@ -13,6 +13,17 @@ app = Flask(__name__)
 @app.route('/')
 def splashpage():
     return render_template("splash.html")
+
+@app.route('/results', methods=["POST"])
+def searchresults():
+    search_string = request.form["searchbar"]
+    print(search_string)
+    #  TODO: second RESTful call to backend server
+    #  TODO: send some placeholder blank images like all cool websites do nowadays
+    #  and replace the blank images with javascript once the results/data from the call come back
+    #  TODO: replace placeholder results page
+    return render_template("searchresults.html", search_query=search_string)
+
 
 if __name__ == "__main__":
     app.run()
