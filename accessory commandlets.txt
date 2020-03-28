@@ -1,0 +1,9 @@
+import jsonify  #  for flask using json
+#  return jsonify({"var":"value"})
+import requests  #  for flask sending requests to external url
+
+
+
+other commands
+app.run(debug=True)
++ curl -v http://url:port/  # -v gives info like content ype (application/json, text/html utf-8)
