@@ -1,0 +1,4 @@
+wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && chmod +x install.sh && ./install.sh &&  ./start_headless.sh && ./demo.py
+sudo apt-get update
+sudo apt-get -y install python3-pip
+pip3 install -r requirements.txt
