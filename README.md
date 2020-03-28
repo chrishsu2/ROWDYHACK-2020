@@ -1,1 +1,1 @@
-UTSA Hackathon project aiming to aggregate stock data from grocery chains using Google Cloud Platform, written with Python, Javascript, and SQL.
+This is the internal branch. It is used to host resources, links, and images for project direction.
