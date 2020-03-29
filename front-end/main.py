@@ -19,7 +19,7 @@ def splashpage():
 
 urlTest="""http://ptsv2.com/t/9xfj1-1585431634/post"""
 
-@app.route('/about' method=["GET"])
+@app.route('/about', methods=["GET"])
 def aboutpage():
     return render_template("aboutus.html")
 
