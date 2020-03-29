@@ -28,7 +28,6 @@ def scrapeWalmartResults(driver, numItemsToScrape):
         xpath = '//a[@tabindex="0"]'
         link = items[i].find_element_by_xpath(xpath)
         print(i)
-        print(items[i].id)
         print(link.get_attribute("href"))
 
 
