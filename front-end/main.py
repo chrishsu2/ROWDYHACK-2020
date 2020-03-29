@@ -2,7 +2,7 @@
 # @Author: Christopher Hsu
 # @Date:   2020-03-28 12:08:00
 # @Last Modified by:   Christopher Hsu
-# @Last Modified time: 2020-03-28 20:15:35
+# @Last Modified time: 2020-03-28 21:18:33
 
 from flask import Flask, render_template, request, jsonify
 #  import os
@@ -10,7 +10,7 @@ from flask import Flask, render_template, request, jsonify
 #import threading
 import accessoryFunctions
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def splashpage():
