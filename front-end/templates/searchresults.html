@@ -44,82 +44,40 @@
         <div class="row row-content">
             <div class="col-12 align-self-center">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                    <table class="table table-bordered table-hover" id="tableResults">
+
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function createTable(results) {
+            var arr = JSON.parse(results);
+            var i;
+            var out = "<thead> \
+                    <tr> \
+                        <th scope=\"col\">Item</th> \
+                        <th scope=\"col\">Image</th> \
+                        <th scope=\"col\">Store</th> \
+                        <th scope=\"col\"># in Stock</th> \
+                    </tr > \
+                    </thead> \
+                    <tbody>";
+            for (i = 0; i < arr.length; i++) {
+                out += "<tr>";
+                out += "<th scope=\"row\">" + "</th>";
+                out += "<td>" + arr[i].name + "</td>";
+                out += "<td><img src=\"" + arr[i].imageUrl + "\">"
+                out += "<td>" + "</td>";
+                out += "<td>" + arr[i].stock + "</td>";
+                out += "</tr>";
+            }
+            out += "</tbody>";
+            document.getElementById("tableResults").innerHTML = out;
+        }
+    </script>
 
     <script src="/static/nodemodules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
