@@ -23,6 +23,7 @@ urlTest="""http://ptsv2.com/t/9xfj1-1585431634/post"""
 def aboutpage():
     return render_template("aboutus.html")
 
+
 @app.route('/results', methods=["POST"])
 def searchresults():
     search_string = request.form["searchbar"]
@@ -33,10 +34,6 @@ def searchresults():
     #  and replace the blank images with javascript once the results/data from the call come back
     #  TODO: replace placeholder results page
     return render_template("searchresults.html", search_query=search_string)
-
-
-
-
 
 
 

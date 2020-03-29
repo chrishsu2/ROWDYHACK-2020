@@ -1,12 +1,17 @@
 import requests
+import os
+import shutil
 #import loggingFile
 # TODO: add log Decorators use functools etc
 # TODO: find the end points
 # TODO: init a dataCache instance. Cache data, 
-def postData2Svr(data, URLEndPoint):
+def postData2Svr(data, URLEndPoint,method):
     ## need a wrapper to handle this
     ## without a wrapper cannot run async
-    response = requests.post(url=URLEndPoint, data=data)
+    if method == "POST":
+        response = requests.post(url=URLEndPoint,data=data)
+    if method == "GET":
+        response = requests.get(URLEndPoint,params=data)
     return response
 
 class dataCache:
@@ -21,5 +26,4 @@ class dataCache:
         return
     def deleteCache(self):
         self.cache=[]
-        return 
-    
+        return
