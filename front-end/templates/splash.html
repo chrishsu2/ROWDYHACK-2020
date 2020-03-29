@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/nodemodules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/nodemodules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/nodemodules/bootstrap-social/bootstrap-social.css">
+
+    <title>Rowdyhacks main page</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>
+                        Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href={{ url_for('aboutpage') }}><span class="fa fa-info fa-lg"></span>
+                        About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    Intro about website?
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container h-100 justify-content-center">
+        <div class="row row-header">
+            <div class="col-12 col-sm-6">
+                <h3>Find available supplies</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm">
+                <form class="form-inline" action={{ url_for('searchresults') }} method="post" role="form">
+                    <input class="form-control mr-4 mr-sm-2" type="search" name="searchbar" placeholder="Search here! Press enter.">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/nodemodules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/static/nodemodules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/static/nodemodules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
