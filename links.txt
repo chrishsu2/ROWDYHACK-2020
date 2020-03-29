@@ -1,18 +1,28 @@
 GIT HOW-TO AND GUIDES:
-Show you how to resolve merge conflicts: https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
-Gives common git commands in a cheat sheet: https://www.git-tower.com/blog/git-cheat-sheet/
+How to resolve merge conflicts: https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
+Common git commands in a cheat sheet: https://www.git-tower.com/blog/git-cheat-sheet/
 
-NODE.JS AND RESTful API
-Show you the basic structure of a front-end + back-end: https://www.youtube.com/watch?v=0oXYLzuucwE&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q&index=1
-Give you a basic template for a Node.js server: https://www.youtube.com/watch?v=blQ60skPzl0&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q&index=2
-Show you how to add routes for RESTful API calls to Node.js: https://www.youtube.com/watch?v=FV1Ugv1Temg&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q&index=3
-Get you set up on creating a Node.js GCP server: https://cloud.google.com/nodejs/docs/setup
-Give a brief overview on HTTP methods: https://www.w3schools.com/tags/ref_httpmethods.asp
+GENERAL RESTful API AND PYTHON FALCON
+Basic structure of a front-end + back-end: https://www.youtube.com/watch?v=0oXYLzuucwE&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q&index=1
+Basic template for a Node.js server: https://www.youtube.com/watch?v=blQ60skPzl0&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q&index=2
+How to add routes for RESTful API calls to Node.js: https://www.youtube.com/watch?v=FV1Ugv1Temg&list=PL55RiY5tL51q4D-B63KBnygU6opNPFk_q&index=3
+Brief overview on HTTP methods: https://www.w3schools.com/tags/ref_httpmethods.asp
+Google App Engine Standard example for Falcon: https://cloud.google.com/community/tutorials/appengine-python-falcon
 
 PYTHON AND REQUIREMENTS
-Guide you on how to use pip for requirements: https://pip.pypa.io/en/stable/user_guide/
-Quickly show you how to create a python venv: https://webcache.googleusercontent.com/search?q=cache:imIPI9JGVJUJ:https://docs.python.org/3/library/venv.html+&cd=1&hl=en&ct=clnk&gl=us
-Help you set up a GCP App Engine website: https://cloud.google.com/appengine/docs/flexible/python/quickstart
+How to use pip for requirements: https://pip.pypa.io/en/stable/user_guide/
+How to create a python venv: https://webcache.googleusercontent.com/search?q=cache:imIPI9JGVJUJ:https://docs.python.org/3/library/venv.html+&cd=1&hl=en&ct=clnk&gl=us
+Set up a GCP App Engine website: https://cloud.google.com/appengine/docs/flexible/python/quickstart
+Explains GCP .yaml file structure and services: https://cloud.google.com/appengine/docs/standard/python3/configuration-files
+Lists .yaml syntax: https://cloud.google.com/appengine/docs/standard/python3/config/appref
 
 WEB SCRAPING
-Give you a script to setup environment for Selenium via Python: https://github.com/garywu/google-compute-engine-selenium/blob/master/demo.py
+A script to setup environment for Selenium via Python: https://github.com/garywu/google-compute-engine-selenium/blob/master/demo.py
+
+HTML/REST REQUESTS
+Parameters for python's requests module: https://requests.readthedocs.io/en/master/user/quickstart/
+Flask's jsonify: https://kite.com/python/docs/flask.jsonify
+
+OUR WEBSITE URLS
+Main: https://rowdyhacks-dev.appspot.com/
+REST API endpoint: https://back-end-dot-rowdyhacks-dev.appspot.com/api
