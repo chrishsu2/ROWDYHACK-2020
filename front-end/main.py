@@ -17,9 +17,11 @@ def splashpage():
     return render_template("splash.html")
 
 
-
 urlTest="""http://ptsv2.com/t/9xfj1-1585431634/post"""
 
+@app.route('/about' method=["GET"])
+def aboutpage():
+    return render_template("aboutus.html")
 
 @app.route('/results', methods=["POST"])
 def searchresults():
@@ -32,9 +34,7 @@ def searchresults():
     #  TODO: replace placeholder results page
     return render_template("searchresults.html", search_query=search_string)
 
-@app.route('/about', methods=["GET"])
-def about():
-    return render_template("about.html")
+
 
 
 
