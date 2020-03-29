@@ -14,6 +14,10 @@ app = Flask(__name__)
 def splashpage():
     return render_template("splash.html")
 
+@app.route('/about')
+def aboutpage():
+    return render_template("aboutus.html")
+
 @app.route('/results', methods=["POST"])
 def searchresults():
     search_string = request.form["searchbar"]

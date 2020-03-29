@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/static/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
 
-    <title>Rowdyhacks main page</title>
+    <title>About Us</title>
 </head>
 
 <body>
@@ -23,9 +23,10 @@
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href={{ url_for('splashpage') }}><span class="fa fa-home fa-lg"></span>
+                    <li class="nav-item active"><a class="nav-link" href={{ url_for('splashpage') }}><span
+                                class="fa fa-home fa-lg"></span>
                             Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href={{ url_for('aboutpage') }}><span class="fa fa-info fa-lg"></span>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span>
                             About</a></li>
                 </ul>
                 <form class="form-inline" action={{ url_for('searchresults') }} method="post" role="form">
@@ -35,9 +36,8 @@
             </div>
         </div>
     </nav>
-    <h1>My First Heading</h1>
-    <p>Your search query was: {{ search_query }}</p>
 
     <script src="/static/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
