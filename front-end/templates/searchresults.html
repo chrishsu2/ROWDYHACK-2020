@@ -10,8 +10,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/static/nodemodules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/nodemodules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/css/styles.css">
     <link rel="stylesheet" href="/static/nodemodules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
 
     <title>Rowdyhacks main page</title>
 </head>
@@ -36,13 +36,12 @@
             </div>
         </div>
     </nav>
-    <h1>My First Heading</h1>
+    <h1>Results</h1>
     <p>Your search query was: {{ search_query }}</p>
-    <p>The results are: {{ results }}</p>
 
     <div class="container">
         <div class="row row-content">
-            <div class="col-12 align-self-center">
+            <div class="col-12 col-sm-9">
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover" id="tableResults">
 
@@ -52,33 +51,41 @@
         </div>
     </div>
 
-    <script>
-        function createTable(results) {
-            var arr = JSON.parse(results);
-            var i;
-            var out = "<thead> \
-                    <tr> \
-                        <th scope=\"col\">Item</th> \
-                        <th scope=\"col\">Image</th> \
-                        <th scope=\"col\">Store</th> \
-                        <th scope=\"col\"># in Stock</th> \
-                    </tr > \
-                    </thead> \
-                    <tbody>";
-            for (i = 0; i < arr.length; i++) {
-                out += "<tr>";
-                out += "<th scope=\"row\">" + "</th>";
-                out += "<td>" + arr[i].name + "</td>";
-                out += "<td><img src=\"" + arr[i].imageUrl + "\">"
-                out += "<td>" + "</td>";
-                out += "<td>" + arr[i].stock + "</td>";
-                out += "</tr>";
-            }
-            out += "</tbody>";
-            document.getElementById("tableResults").innerHTML = out;
-        }
-    </script>
-
+    <script src="/static/nodemodules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="/static/nodemodules/popper.js/dist/umd/popper.min.js"></script>
     <script src="/static/nodemodules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var res = '{{ results|tojson }}';
+        var arr = JSON.parse(res);
+        var table = document.createElement("table");
+        var tr = table.insertRow(-1);
+
+        var theader1 = document.createElement("th");
+        theader1.innerHTML = "Image";
+        tr.appendChild(theader1);
+        var theader2 = document.createElement("th");
+        theader2.innerHTML = "Item";
+        tr.appendChild(theader2);
+        var theader3 = document.createElement("th");
+        theader3.innerHTML = "Store";
+        tr.appendChild(theader3);
+        var theader4 = document.createElement("th");
+        theader4.innerHTML = "Stock";
+        tr.appendChild(theader4);
+
+        for (var i = 0; i < arr["results"].length; i++) {
+            tr = table.insertRow(-1); 
+            var cell1 = tr.insertCell(-1);
+            var img = document.createElement("img");
+            img.src = arr["results"][i]["imageUrl"];
+            cell1.appendChild(img); 
+            var cell2 = tr.insertCell(-1); 
+            cell2.innerHTML = arr["results"][i]["name"]; 
+            var cell3 = tr.insertCell(-1);
+            var cell4 = tr.insertCell(-1);
+            cell4.innerHTML = arr["results"][i]["stock"];
+        }
+        document.getElementById("tableResults").appendChild(table);
+    </script>
 </body>
 </html>
