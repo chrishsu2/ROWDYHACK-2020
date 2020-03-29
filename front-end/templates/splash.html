@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="/static/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/node_modules/bootstrap-social/bootstrap-social.css">
 
     <title>Rowdyhacks main page</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm fixed-top">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -28,90 +29,31 @@
                     <li class="nav-item"><a class="nav-link" href={{ url_for('aboutpage') }}><span class="fa fa-info fa-lg"></span>
                         About</a></li>
                 </ul>
-                <form class="form-inline" action={{ url_for('searchresults') }} method="post" role="form">
-                    <input class="form-control mr-4 mr-sm-2" type="search" name="searchbar" placeholder="Search here! Press enter.">
-                </form>
             </div>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row row-content">
-            <div class="col-12 align-self-center">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    Intro about website?
                 </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container h-100 justify-content-center">
+        <div class="row row-header">
+            <div class="col-12 col-sm-6">
+                <h3>Find available supplies</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm">
+                <form class="form-inline" action={{ url_for('searchresults') }} method="post" role="form">
+                    <input class="form-control mr-4 mr-sm-2" type="search" name="searchbar" placeholder="Search here! Press enter.">
+                </form>
             </div>
         </div>
     </div>
