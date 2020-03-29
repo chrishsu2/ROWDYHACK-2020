@@ -21,11 +21,11 @@ class SearchRequestClass:
             'request type' : 'GET',
             #  Placeholder dummy results
             'results':
-                [{'name': 'dummyname0', 'image url': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '0'},
-                {'name': 'dummyname1', 'image url': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '10'},
-                {'name': 'dummyname2', 'image url': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '-1'},   # -1 means unavailable
-                {'name': 'dummyname3', 'image url': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '99'},
-                {'name': 'dummyname4', 'image url': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '2'}]
+                [{'name': 'dummyname0', 'imageUrl': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '0'},
+                {'name': 'dummyname1', 'imageUrl': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '10'},
+                {'name': 'dummyname2', 'imageUrl': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '-1'},   # -1 means unavailable
+                {'name': 'dummyname3', 'imageUrl': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '99'},
+                {'name': 'dummyname4', 'imageUrl': "https://i.imgur.com/C8Yjy1T.jpg", 'stock': '2'}]
         }
         resp.body = json.dumps(content)
 
