@@ -77,7 +77,10 @@
             tr = table.insertRow(-1); 
             var cell1 = tr.insertCell(-1);
             var img = document.createElement("img");
-            img.src = arr["results"][i]["imageUrl"];
+            img.src = arr["results"][i]["image url"];
+            img.alt = arr["results"][i]["name"];
+            img.width = 100;
+            img.height = 100;
             cell1.appendChild(img); 
             var cell2 = tr.insertCell(-1); 
             cell2.innerHTML = arr["results"][i]["name"]; 

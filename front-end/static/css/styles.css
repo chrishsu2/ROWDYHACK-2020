@@ -1,9 +1,17 @@
+.row-header {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+
 body {
     padding: 70px 0px 0px 0px;
     height: 100%;
-}
-
-row {
-    align-content: center;
 }
 
