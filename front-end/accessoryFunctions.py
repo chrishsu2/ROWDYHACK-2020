@@ -1,8 +1,9 @@
 import requests
+from flask import jsonify
 #import loggingFile
 # TODO: add log Decorators use functools etc
 # TODO: find the end points
-# TODO: init a dataCache instance. Cache data, 
+# TODO: init a dataCache instance. Cache data,
 def postData2Svr(data, URLEndPoint):
     ## need a wrapper to handle this
     ## without a wrapper cannot run async
@@ -10,7 +11,7 @@ def postData2Svr(data, URLEndPoint):
     return response
 
 class dataCache:
-    """"supposedly hold the data, 
+    """"supposedly hold the data,
     need this class to empty response data if client switches screens or searches
     """
 
@@ -21,5 +22,10 @@ class dataCache:
         return
     def deleteCache(self):
         self.cache=[]
-        return 
-    
+        return
+
+
+
+def getBackendResponse(payload, URLEndPoint):
+    response = requests.get(url=URLEndPoint, params=payload)
+    return response
