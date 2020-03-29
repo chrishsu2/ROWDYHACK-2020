@@ -1,40 +1,43 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-import pandas as pd
 import time
 import os
+
+
 def getLocation(locationObject):
-    # should return zip code or relevant data. 
+    # should return zip code or relevant data.
     return "78059"
 
-linksToSearch = ["https://www.walmart.com/browse/ordering/product-availability/","https://www.target.com/b/find-it/-/N-tj7f8"]
-driver = webdriver.Chrome("/Users/aaronfanous/Desktop/hackathonStuff/selDataDive/chromedriver")
-# include forloop
-driver.get(linksToSearch[0])
-time.sleep(4) 
-## 
-driver.find_element_by_xpath("//*[@data-tl-id='nd-zip']").click()
+def searchStore(driver, storeType, zipcode, query):
+    if storeType == "Walmart":
+        # Selects store
+        selectStore1 = driver.find_element_by_xpath('//*[@id="store-list"]/div/ol/li[1]/div/div[2]/span[2]/a[1]/span')
+        print(selectStore1.location)
+        selectStore1.click()
+        selectStore2 = driver.find_element_by_xpath('//*[@id="store-finder-results"]/div/div/div[2]/div[1]/div/div/button')
+        selectStore2.click()
 
-for x in getLocation("placeholder"):
-    driver.find_element_by_xpath("/html/body/div[1]/div[1]/div/div[1]/div/div[5]/div[1]/div[2]/div[2]/div[1]/div/div[1]/input").send_keys(x)
-driver.find_element_by_xpath("/html/body/div[1]/div[1]/div/div[1]/div/div[5]/div[1]/div[2]/div[2]/div[1]/div/div[2]/button").click()
-time.sleep(1)
-driver.find_element_by_xpath("//*[@data-tl-id='header-search-input']").send_keys("milk")
-driver.find_element_by_xpath("//*[@data-tl-id='GlobalHeaderSearchbar-submit']").click()
-time.sleep(3)
-#input_field = driver.find_element_by_name("query")
-#input_field.send_keys(getLocation("placeholder"))
-#input_field.submit()
-#  driver.find_element_by_xpath("//*[@data-tl-id='zipcode-form-submit-button']").click()
+        searchField = driver.find_element_by_xpath('//*[@id="store-finder-results"]/div/div/div[4]/form/div/div[1]/span/div/label/input')
+        searchField.clear()
+        searchField.send_keys(query)
+        input("0 search store")
+        searchField.submit()
 
 
+def main():
+    linksToSearch = ["https://www.walmart.com/browse/ordering/product-availability/","https://www.target.com/b/find-it/-/N-tj7f8"]
+    #  driver = webdriver.Chrome("/Users/aaronfanous/Desktop/hackathonStuff/selDataDive/chromedriver") #  add webdriver to PATH instead
+    driver = webdriver.Chrome()  # replace with "with webdriver.Chrome() as driver" when ready for production
 
-driver.quit()
-#3 need to use xpath for the end portions. 
-## vs using css selectors-- use xpath for everything that has attributes, 
-# worry about headless after you have built the paths. 
+    driver.get("https://www.walmart.com/store/finder?location="+getLocation("placeholder"))
+    time.sleep(1)
+    searchStore(driver, "Walmart", getLocation("PLACEHOLDER"), "bread")
+    time.sleep(1)
+    input("before quit!")
+    driver.quit()
 
-"""dig through all the files and pull relevant information"""
 
+
+main()
 
 
